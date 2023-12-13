@@ -30,24 +30,6 @@ let playRound = (playerSelection, computerSelection) => {
   }
 }
 
-/*
-let playerSelection = getPlayerChoice();
-let computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-*/
-
 let game = () => {
   let computerPoints = 0;
   let playerPoints = 0;
