@@ -51,7 +51,7 @@ console.log(playRound(playerSelection, computerSelection));
 let game = () => {
   let computerPoints = 0;
   let playerPoints = 0;
-  while(computerPoints < 5 || playerPoints < 5) {
+  while(computerPoints < 5 && playerPoints < 5) {
     playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
     if (playRound(playerSelection, computerSelection) === `You Win! ${playerSelection} beats ${computerSelection}`) {
@@ -65,10 +65,10 @@ let game = () => {
       console.log(`You Lose! ${computerSelection} beats ${playerSelection}, you have ${playerPoints} and the computer have ${computerPoints}`);
     }
   }
-  if (playersPoints > computerPoints) {
+  if (playerPoints > computerPoints) {
     console.log('Congratulaion, you finally win');
   } else {
-    console.log('Sorry, you finally win');
+    console.log('Sorry, you finally lose, please try again');
   }
 }
 
