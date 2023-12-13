@@ -14,8 +14,62 @@ let getComputerChoice = () => {
   }
 }
 
-getComputerChoice();
-
 let getPlayerChoice = () => {
-  
+  let choice = prompt('Give me your election please');
+  let toLower = choice.toLowerCase();
+  return toLower;
 }
+
+let playRound = (playerSelection, computerSelection) => {
+  if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+    return `You Win! ${playerSelection} beats ${computerSelection}`;
+  } else if (playerSelection === computerSelection) {
+    return 'It\'s a tie';
+  } else {
+    return `You Lose! ${computerSelection} beats ${playerSelection}`;
+  }
+}
+
+/*
+let playerSelection = getPlayerChoice();
+let computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+playerSelection = getPlayerChoice();
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+playerSelection = getPlayerChoice();
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+playerSelection = getPlayerChoice();
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+playerSelection = getPlayerChoice();
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+*/
+
+let game = () => {
+  let computerPoints = 0;
+  let playerPoints = 0;
+  while(computerPoints < 5 || playerPoints < 5) {
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
+    if (playRound(playerSelection, computerSelection) === `You Win! ${playerSelection} beats ${computerSelection}`) {
+      playerPoints++;
+      console.log(`You Win! ${playerSelection} beats ${computerSelection}, you have ${playerPoints} and the computer have ${computerPoints}`);
+    } else if (playRound(playerSelection, computerSelection) === 'It\'s a tie') {
+      console.log('It\'s a tie');
+      continue;
+    } else {
+      computerPoints++;
+      console.log(`You Lose! ${computerSelection} beats ${playerSelection}, you have ${playerPoints} and the computer have ${computerPoints}`);
+    }
+  }
+  if (playersPoints > computerPoints) {
+    console.log('Congratulaion, you finally win');
+  } else {
+    console.log('Sorry, you finally win');
+  }
+}
+
+game();
