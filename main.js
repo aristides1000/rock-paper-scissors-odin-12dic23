@@ -15,10 +15,15 @@ let getComputerChoice = () => {
 }
 
 let getPlayerChoice = () => {
-  let choice = prompt('Give me your election please');
-  let toLower = choice.toLowerCase();
-  return toLower;
+  //let choice = prompt('Give me your election please');
+  //let toLower = choice.toLowerCase();
+  //return toLowerCase;
+
+  console.log('hola');
 }
+
+let playerSelectionRock = document.getElementById("playerSelectionRock");
+playerSelectionRock.onClick = getPlayerChoice();
 
 let playRound = (playerSelection, computerSelection) => {
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
@@ -54,4 +59,4 @@ let game = () => {
   }
 }
 
-game();
+//game();

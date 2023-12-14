@@ -9,19 +9,14 @@
 </head>
 <body>
   <h1>Rock Paper Scissors</h1>
-  <h3>0 - 0</h3>
-  <h4>you win</h4>
-  <h5>congratulation</h5>
+  <h3>Player's points - computer's points</h3>
+  <h2><span id="playersPointsView">0</span> - <span id="computersPointsView">0</span></h2>
+  <h4 id="roundMessage">you win</h4>
+  <h5 id="finalMessage">congratulation</h5>
   <div class="container">
-    <a href="#">
-      <img src="assets/rock-hand.png" alt="rock" class="">
-    </a>
-    <a href="#">
-      <img src="assets/paper-hand.png" alt="paper">
-    </a>
-    <a href="#">
-      <img src="assets/scissor-hand.png" alt="scissors">
-    </a>
+    <img src="assets/rock-hand.png" alt="rock" class="image" id="playerSelectionRock">
+    <img src="assets/paper-hand.png" alt="paper" class="image" id="playerSelectionHand">
+    <img src="assets/scissor-hand.png" alt="scissors" class="image" id="playerSelectionScissor">
   </div>
   <script src="main.js"></script>
 </body>
