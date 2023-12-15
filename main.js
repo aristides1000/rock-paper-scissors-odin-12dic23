@@ -15,15 +15,10 @@ let getComputerChoice = () => {
 }
 
 let getPlayerChoice = () => {
-  //let choice = prompt('Give me your election please');
-  //let toLower = choice.toLowerCase();
-  //return toLowerCase;
-
-  console.log('hola');
+  let choice = prompt('Give me your election please');
+  let toLower = choice.toLowerCase();
+  return toLower;
 }
-
-let playerSelectionRock = document.getElementById("playerSelectionRock");
-playerSelectionRock.onClick = getPlayerChoice();
 
 let playRound = (playerSelection, computerSelection) => {
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
@@ -53,10 +48,10 @@ let game = () => {
     }
   }
   if (playerPoints > computerPoints) {
-    console.log('Congratulaion, you finally win');
+    console.log('Congratulation, you finally win');
   } else {
     console.log('Sorry, you finally lose, please try again');
   }
 }
 
-//game();
+game();
