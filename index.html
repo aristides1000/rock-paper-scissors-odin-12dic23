@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <link rel="icon" type="image/x-icon" href="assets/scissors.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <h1>Rock Paper Scissors</h1>
+  <h3>Player's points - computer's points</h3>
+  <h2><span id="playersPointsView">0</span> - <span id="computersPointsView">0</span></h2>
+  <h4 id="roundMessage">you win</h4>
+  <h5 id="finalMessage">congratulation</h5>
+  <div class="container">
+    <img src="assets/rock-hand.png" alt="rock" class="image" id="playerSelectionRock">
+    <img src="assets/paper-hand.png" alt="paper" class="image" id="playerSelectionHand">
+    <img src="assets/scissor-hand.png" alt="scissors" class="image" id="playerSelectionScissor">
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
