@@ -15,15 +15,19 @@ let getComputerChoice = () => {
 }
 
 let getPlayerChoice = () => {
-  //let choice = prompt('Give me your election please');
-  //let toLower = choice.toLowerCase();
-  //return toLowerCase;
-
-  console.log('hola');
+  let playerSelectionRock = document.getElementById("playerSelectionRock");
+  playerSelectionRock.addEventListener("click", function() {
+    return 'rock';
+  });
+  let playerSelectionPaper = document.getElementById("playerSelectionPaper");
+  playerSelectionPaper.addEventListener("click", function() {
+    return 'paper';
+  });
+  let playerSelectionScissor = document.getElementById("playerSelectionScissor");
+  playerSelectionScissor.addEventListener("click", function() {
+    return 'scissor';
+  });
 }
-
-let playerSelectionRock = document.getElementById("playerSelectionRock");
-playerSelectionRock.onClick = getPlayerChoice();
 
 let playRound = (playerSelection, computerSelection) => {
   if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
@@ -59,4 +63,4 @@ let game = () => {
   }
 }
 
-//game();
+game();
